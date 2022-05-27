@@ -1,0 +1,18 @@
+@import url("redbox.css");
+@import url("greenbox.css");
+
+* {
+  box-sizing: border-box;
+}
+
+#box-container {
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  transition: background-color 3s;
+}
+
+#box-container:hover {
+  background-color: black;
+}
+
