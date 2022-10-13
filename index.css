@@ -1,18 +1,43 @@
 @import url("redbox.css");
-@import url("greenbox.css");
+@import "purplebox.css";
 
 * {
   box-sizing: border-box;
 }
 
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+}
+
+.boxes {
+  border-radius: 10px;
+
+}
+
 #box-container {
   width: 500px;
-  height: 500px;
-  background-color: grey;
+  height: auto;
+  background-color: rgb(79, 79, 79);
   transition: background-color 3s;
+
 }
 
 #box-container:hover {
   background-color: black;
+}
+
+/*combining selectors*/
+
+.boxes:not(#box-container):nth-child(1) { /* 1st element with .boxes class but without #box-container as an id */
+  border-bottom-left-radius: 0px;
+}
+
+.boxes:not(#box-container):nth-child(2) {
+  border-top-left-radius: 0px;
 }
 
